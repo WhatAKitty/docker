@@ -1,0 +1,11 @@
+mysql-dev:
+  environment:
+    - MYSQL_ROOT_PASSWORD=123456
+  image: mysql
+  command: mysqld --character-set-server=utf8 --collation-server=utf8_general_ci
+  restart: always
+  volumes:
+    - ~/Work/mysqlData:/var/lib/mysql
+  ports:
+    - 3306:3306
+  
